@@ -1,0 +1,223 @@
+---
+name: Product info
+icon: image_text
+settings:
+- label: My awesome title
+  id: title
+  type: text
+- label: An image
+  id: image
+  type: image_picker
+blocks:
+- name: List item
+  type: list_item
+  settings:
+  - label: Item title
+    id: title
+    type: text
+    default: Voluptatibus illo enim harum.
+  - label: Item image
+    id: image
+    type: image_picker
+    default: https://cdn.locomotive.works/sites/63d46f3d59cc9d007db80247/assets/63d80f51b54631009768ceaa/default.svg
+presets:
+- name: Product info
+  category: Category
+  settings:
+    title: Eius quis aut eum.
+    image: https://cdn.locomotive.works/sites/63d46f3d59cc9d007db80247/assets/63d80f51b54631009768ceaa/default.svg
+  blocks:
+  - type: list_item
+    settings:
+      title: Itaque voluptatem qui numquam.
+      image: https://cdn.locomotive.works/sites/63d46f3d59cc9d007db80247/assets/63d80f51b54631009768ceaa/default.svg
+  - type: list_item
+    settings:
+      title: Quia est eligendi quam.
+      image: https://cdn.locomotive.works/sites/63d46f3d59cc9d007db80247/assets/63d80f51b54631009768ceaa/default.svg
+  - type: list_item
+    settings:
+      title: Nam assumenda accusamus magnam.
+      image: https://cdn.locomotive.works/sites/63d46f3d59cc9d007db80247/assets/63d80f51b54631009768ceaa/default.svg
+
+---
+{% comment %}
+Above is the YAML definition of your section. Modify it to match your needs.
+
+To use your section, 2 possibilities:
+
+1. within a dropzone
+
+Make sure that your layouts or your page includes the following liquid tag:
+
+{% sections_dropzone %}
+
+If you want to test this section in your Wagon site, add the following
+lines in the YAML section of any page including the {% sections_dropzone %}
+(or inheriting from a layout including it):
+
+sections_dropzone_content:
+- type: "product_info"
+settings:
+title: "Pariatur labore tenetur ducimus."
+image: "https://cdn.locomotive.works/sites/63d46f3d59cc9d007db80247/assets/63d80f51b54631009768ceaa/default.svg"
+blocks: 
+- type: list_item
+settings:
+title: "Est quisquam ipsum quam."
+image: "https://cdn.locomotive.works/sites/63d46f3d59cc9d007db80247/assets/63d80f51b54631009768ceaa/default.svg"
+- type: list_item
+settings:
+title: "Eveniet saepe placeat libero."
+image: "https://cdn.locomotive.works/sites/63d46f3d59cc9d007db80247/assets/63d80f51b54631009768ceaa/default.svg"
+- type: list_item
+settings:
+title: "Et fugiat nobis non."
+image: "https://cdn.locomotive.works/sites/63d46f3d59cc9d007db80247/assets/63d80f51b54631009768ceaa/default.svg"
+
+2. as stand-alone section
+
+{% section 'product_info' %}
+
+If you want to test this section in your Wagon site, add the following
+lines in the YAML section of the page including the statement above or complete it.
+
+sections_content:
+product_info:
+settings:
+title: "Quaerat nobis et velit."
+image: "https://cdn.locomotive.works/sites/63d46f3d59cc9d007db80247/assets/63d80f51b54631009768ceaa/default.svg"
+blocks: 
+- type: list_item
+settings:
+title: "Harum est odio eligendi."
+image: "https://cdn.locomotive.works/sites/63d46f3d59cc9d007db80247/assets/63d80f51b54631009768ceaa/default.svg"
+- type: list_item
+settings:
+title: "Labore unde in aut."
+image: "https://cdn.locomotive.works/sites/63d46f3d59cc9d007db80247/assets/63d80f51b54631009768ceaa/default.svg"
+- type: list_item
+settings:
+title: "Qui aut veritatis nemo."
+image: "https://cdn.locomotive.works/sites/63d46f3d59cc9d007db80247/assets/63d80f51b54631009768ceaa/default.svg"
+
+{% endcomment %}<div class="header-prod">
+  <div class="slideshow-container">
+    <div class="slide">
+      <img src="/images/products/native_iron_chair_1.PNG" alt="">
+    </div>
+    <div class="slide">
+      <img src="/images/products/native_iron_chair_2.PNG" alt="">
+    </div>
+    <a class="pre" onclick="plusSlides(-1)">
+      <img src="/images/icons/proximo.png" alt="next">
+    </a>
+    <a class="post" onclick="plusSlides(1)">
+      <img src="/images/icons/proximo.png" alt="previous">
+    </a>
+
+    <div class="dot-container">
+      <span class="dot" onclick="slideActual(1)"></span>
+      <span class="dot" onclick="slideActual(2)"></span>
+    </div>
+  </div>
+  <div class="header-prod__content">
+    <h1 class="header-prod__title">Native Iron Chair</h1>
+    <div class="header-prod__sku">ON-CHAIR</div>
+    <div class="header-prod__descr">
+      The chair has a classic style characterized by a robust design, composed of tubes with larger
+      dimensions and a high back, making the product more ergonomic. The MDP backrest and the upholstered
+                                                                  seat provide greater user comfort. In addition to being an elegant chair, it has high strength.
+    </div>
+    <div class="header-prod__price">$4,990</div>
+    <form
+      class="form-prod"
+      action="/cart/add"
+      method="post">
+      <div class="prod-variants">
+        <fieldset class="fieldset-var">
+          <input
+            type="radio"
+            name="id"
+            id="variant-1"
+            data-inventory-qt="5"
+            data-sku="ON-40X">
+          <label for="variant-1">40x40</label>
+        </fieldset>
+        <fieldset class="fieldset-var">
+          <input
+            type="radio"
+            name="id"
+            id="variant-1"
+            data-inventory-qt="5"
+            data-sku="ON-40X">
+          <label for="variant-1">80x80</label>
+        </fieldset>
+        <fieldset class="fieldset-var">
+          <input
+            type="radio"
+            name="id"
+            id="variant-1"
+            data-inventory-qt="5"
+            data-sku="ON-40X">
+          <label for="variant-1">100x100</label>
+        </fieldset>
+        <fieldset class="fieldset-var">
+          <input
+            type="radio"
+            name="id"
+            id="variant-1"
+            data-inventory-qt="5"
+            data-sku="ON-40X">
+          <label for="variant-1">122x122</label>
+        </fieldset>
+      </div>
+      <button
+        class="btn cta"
+        type="submit"
+        style="color: white;">Add to bag</button>
+    </form>
+
+    <!--
+
+    <div class="header-prod__option-content" id="description">
+    <span>Details</span>
+    <p>
+    Its structure made with high quality materials guarantees every comfort so that your
+    meals are always special. The backrest in drawn steel, Tubular structure finish is
+    polished to provide a better looking chrome plating. Chrome plating is done in-house,
+    ensuring greater reliability in its processes and products. Upholstery covered with good
+    quality fabrics, or polyvinyl sheet (nappa).
+    </p>
+    <ul>
+    <li>HEIGHT(CM): 100</li>
+    <li>WIDTH(CM): 42</li>
+    <li>DEPTH(CM): 42</li>
+    <li>WEIGHT: 12</li>
+    <li>MODEL: REQUINT</li>
+    <li>FABRIC ORIGIN: CANADA</li>
+    </ul>
+    </div>
+    <div class="header-prod__option-content" id="shipping">
+    <span>Shipping</span>
+    <p>
+    We carry out our deliveries by contracted carriers, depending on the location. We
+    deliver in most parts of the world all the products available for sale on the website.
+    It is not possible to schedule a date and time for deliveries. The receipt of the goods
+    can be carried out by third parties, such as doormen of condominiums and family members,
+    as long as they sign the proof of receipt of the goods.
+    </p>
+    </div>
+    <div class="header-prod__option-content" id="return">
+    <span>Return</span>
+    <p>
+    You can ask for an exchange or return and still order parts after assembly. The deadline
+    for requests is up to 07 calendar days after delivery of the product. Illustrative
+    photos. Reduction scales are not proportional. The decorative objects that appear in the
+    products on offer are not included in their prices. We reserve the right to correct
+    graphic errors. For more please visit the FAQ's section and/or our Terms and Condition
+    of Use.
+    </p>
+    </div> 
+    --></div>
+</div>

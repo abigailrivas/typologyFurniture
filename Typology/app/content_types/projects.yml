@@ -1,0 +1,37 @@
+name: Projects
+slug: projects
+description: A description of the content type for the editors
+label_field_name: name
+order_by: _position
+order_direction: asc
+public_submission_enabled: false
+public_submission_account_emails: []
+fields:
+- name:
+    label: Name
+    type: string
+    required: true
+    hint: Explanatory text displayed in the back office
+    localized: false
+    group: main
+- client:
+    label: Client
+    type: string
+    required: false
+    hint: Explanatory text displayed in the back office
+    localized: false
+    group: main
+- description:
+    label: Description
+    type: text
+    required: false
+    hint: Explanatory text displayed in the back office
+    localized: false
+    group: main
+- image:
+    label: Image
+    type: file
+    required: false
+    hint: Explanatory text displayed in the back office
+    localized: false
+    group: main

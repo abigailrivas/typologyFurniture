@@ -1,0 +1,17 @@
+production:
+  host: https://station.locomotive.works
+  handle: poised-meadow-6540
+  email: charmidemg@gmail.com
+  api_key: c5bb9fbf1f1ba1ea83d75f28c009b0da7418746b
+
+staging:
+  host: https://station.locomotive.works
+  handle: poised-meadow-6540
+  email: charmidemg@gmail.com
+  api_key: c5bb9fbf1f1ba1ea83d75f28c009b0da7418746b
+
+live:
+  host: https://station.locomotive.works
+  handle: poised-meadow-6540
+  email: charmidemg@gmail.com
+  api_key: c5bb9fbf1f1ba1ea83d75f28c009b0da7418746b

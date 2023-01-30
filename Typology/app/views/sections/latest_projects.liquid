@@ -1,0 +1,86 @@
+---
+name: Latest projects
+icon: list
+settings:
+- label: Title
+  id: title
+  type: text
+- label: Projects
+  id: projects
+  type: content_type
+blocks: []
+presets:
+- name: Latest projects
+  category: Category
+  settings:
+    title: Saepe illum repellat veritatis.
+  blocks: []
+
+---
+{% comment %}
+Above is the YAML definition of your section. Modify it to match your needs.
+
+To use your section, 2 possibilities:
+
+1. within a dropzone
+
+Make sure that your layouts or your page includes the following liquid tag:
+
+{% sections_dropzone %}
+
+If you want to test this section in your Wagon site, add the following
+lines in the YAML section of any page including the {% sections_dropzone %}
+(or inheriting from a layout including it):
+
+sections_dropzone_content:
+- type: "latest_projects"
+settings:
+title: "Voluptates cum ipsa at."
+blocks: []
+
+
+2. as stand-alone section
+
+{% section 'latest_projects' %}
+
+If you want to test this section in your Wagon site, add the following
+lines in the YAML section of the page including the statement above or complete it.
+
+sections_content:
+latest_projects:
+settings:
+title: "Nesciunt quibusdam laborum molestiae."
+blocks: []
+
+
+{% endcomment %}<div
+  id="{{ section.anchor_id }}"
+  class="section latest-projects-section"
+  {{ section.locomotive_attributes }}>
+  <h2 class="title is-2">{{ section.settings.title }}</h2>
+
+  <div class="columns is-multiline">
+    {% for project in contents.projects %}
+      <div class="column is-half">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="{% if project.image.url is blank %}https://bulma.io/images/placeholders/1280x960.png{% else %}{{ project.image.url | resize: '800x800#' }}{% endif %}" alt="{{ project.name }}">
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="media">
+              <div class="media-content">
+                <p class="title is-4">{{ project.name }}</p>
+                <p class="subtitle is-6">{{ project.client }}</p>
+              </div>
+            </div>
+            <div class="content">
+              {{ project.description }}
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>

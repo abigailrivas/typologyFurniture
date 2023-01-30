@@ -1,0 +1,113 @@
+---
+name: Product suggestion
+icon: image_text
+settings:
+- label: My awesome title
+  id: title
+  type: text
+- label: An image
+  id: image
+  type: image_picker
+blocks:
+- name: List item
+  type: list_item
+  settings:
+  - label: Item title
+    id: title
+    type: text
+    default: Dolore distinctio culpa ea.
+  - label: Item image
+    id: image
+    type: image_picker
+    default: https://cdn.locomotive.works/sites/63d46f3d59cc9d007db80247/assets/63d80f51b54631009768ceaa/default.svg
+presets:
+- name: Product suggestion
+  category: Category
+  settings:
+    title: Eum maxime deserunt autem.
+    image: https://cdn.locomotive.works/sites/63d46f3d59cc9d007db80247/assets/63d80f51b54631009768ceaa/default.svg
+  blocks:
+  - type: list_item
+    settings:
+      title: Dolor possimus cupiditate magnam.
+      image: https://cdn.locomotive.works/sites/63d46f3d59cc9d007db80247/assets/63d80f51b54631009768ceaa/default.svg
+  - type: list_item
+    settings:
+      title: Ratione non sit repellat.
+      image: https://cdn.locomotive.works/sites/63d46f3d59cc9d007db80247/assets/63d80f51b54631009768ceaa/default.svg
+  - type: list_item
+    settings:
+      title: Asperiores tenetur quia hic.
+      image: https://cdn.locomotive.works/sites/63d46f3d59cc9d007db80247/assets/63d80f51b54631009768ceaa/default.svg
+
+---
+{% comment %}
+Above is the YAML definition of your section. Modify it to match your needs.
+
+To use your section, 2 possibilities:
+
+1. within a dropzone
+
+Make sure that your layouts or your page includes the following liquid tag:
+
+{% sections_dropzone %}
+
+If you want to test this section in your Wagon site, add the following
+lines in the YAML section of any page including the {% sections_dropzone %}
+(or inheriting from a layout including it):
+
+sections_dropzone_content:
+- type: "product_suggestion"
+settings:
+title: "Qui rerum aliquam corrupti."
+image: "https://cdn.locomotive.works/sites/63d46f3d59cc9d007db80247/assets/63d80f51b54631009768ceaa/default.svg"
+blocks: 
+- type: list_item
+settings:
+title: "Laudantium neque mollitia eum."
+image: "https://cdn.locomotive.works/sites/63d46f3d59cc9d007db80247/assets/63d80f51b54631009768ceaa/default.svg"
+- type: list_item
+settings:
+title: "Voluptatum eum nostrum a."
+image: "https://cdn.locomotive.works/sites/63d46f3d59cc9d007db80247/assets/63d80f51b54631009768ceaa/default.svg"
+- type: list_item
+settings:
+title: "Est provident aperiam qui."
+image: "https://cdn.locomotive.works/sites/63d46f3d59cc9d007db80247/assets/63d80f51b54631009768ceaa/default.svg"
+
+2. as stand-alone section
+
+{% section 'product_suggestion' %}
+
+If you want to test this section in your Wagon site, add the following
+lines in the YAML section of the page including the statement above or complete it.
+
+sections_content:
+product_suggestion:
+settings:
+title: "Reprehenderit ut fugiat qui."
+image: "https://cdn.locomotive.works/sites/63d46f3d59cc9d007db80247/assets/63d80f51b54631009768ceaa/default.svg"
+blocks: 
+- type: list_item
+settings:
+title: "Quia ab voluptatum non."
+image: "https://cdn.locomotive.works/sites/63d46f3d59cc9d007db80247/assets/63d80f51b54631009768ceaa/default.svg"
+- type: list_item
+settings:
+title: "Aspernatur alias quod enim."
+image: "https://cdn.locomotive.works/sites/63d46f3d59cc9d007db80247/assets/63d80f51b54631009768ceaa/default.svg"
+- type: list_item
+settings:
+title: "Ea quasi dolorem recusandae."
+image: "https://cdn.locomotive.works/sites/63d46f3d59cc9d007db80247/assets/63d80f51b54631009768ceaa/default.svg"
+
+{% endcomment %}<section class="product-suggestion">
+  <div class="product-sugggestion__description">
+    <h4>Matté Wood Chair</h4>
+    <p>Refinement Chair with Ripped Seat, made of retro Eucalyptus wood, of great resistance, Kiln dried, made with a spike system and painted with P.U. (Polyurethane) With its entire structure painted in wood, it offers a lot of elegance to your environment and when cleaning is very easy, as it is washable and light for movement. Enough of receiving visitors and not having a place to accommodate them. With the chair, your days as a host will be marked by a lot of elegance and sophistication.</p>
+    <a href="" class="text-btn text-btn--white">View Product</a>
+  </div>
+  <div class="product-suggestion__photo">
+    <img src="{{ 'products/matte_wood_chair_1.PNG' | theme_image_url }}" alt="Matte Wood Chair">
+  </div>
+</section>

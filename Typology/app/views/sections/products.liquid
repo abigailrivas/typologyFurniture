@@ -1,0 +1,135 @@
+---
+name: Products
+icon: image_text
+settings:
+- label: My awesome title
+  id: title
+  type: text
+- label: An image
+  id: image
+  type: image_picker
+blocks:
+- name: List item
+  type: list_item
+  settings:
+  - label: Item title
+    id: title
+    type: text
+    default: Dolorem qui et et.
+  - label: Item image
+    id: image
+    type: image_picker
+    default: https://cdn.locomotive.works/sites/63d46f3d59cc9d007db80247/assets/63d80f51b54631009768ceaa/default.svg
+presets:
+- name: Products
+  category: Category
+  settings:
+    title: Facilis quia alias autem.
+    image: https://cdn.locomotive.works/sites/63d46f3d59cc9d007db80247/assets/63d80f51b54631009768ceaa/default.svg
+  blocks:
+  - type: list_item
+    settings:
+      title: Et deleniti eligendi voluptatem.
+      image: https://cdn.locomotive.works/sites/63d46f3d59cc9d007db80247/assets/63d80f51b54631009768ceaa/default.svg
+  - type: list_item
+    settings:
+      title: Et reiciendis odit quaerat.
+      image: https://cdn.locomotive.works/sites/63d46f3d59cc9d007db80247/assets/63d80f51b54631009768ceaa/default.svg
+  - type: list_item
+    settings:
+      title: At a voluptatem commodi.
+      image: https://cdn.locomotive.works/sites/63d46f3d59cc9d007db80247/assets/63d80f51b54631009768ceaa/default.svg
+
+---
+{% comment %}
+Above is the YAML definition of your section. Modify it to match your needs.
+
+To use your section, 2 possibilities:
+
+1. within a dropzone
+
+Make sure that your layouts or your page includes the following liquid tag:
+
+{% sections_dropzone %}
+
+If you want to test this section in your Wagon site, add the following
+lines in the YAML section of any page including the {% sections_dropzone %}
+(or inheriting from a layout including it):
+
+sections_dropzone_content:
+- type: "products"
+settings:
+title: "Nemo porro optio exercitationem."
+image: "https://cdn.locomotive.works/sites/63d46f3d59cc9d007db80247/assets/63d80f51b54631009768ceaa/default.svg"
+blocks: 
+- type: list_item
+settings:
+title: "Voluptatem aut hic dolores."
+image: "https://cdn.locomotive.works/sites/63d46f3d59cc9d007db80247/assets/63d80f51b54631009768ceaa/default.svg"
+- type: list_item
+settings:
+title: "Assumenda non dignissimos sit."
+image: "https://cdn.locomotive.works/sites/63d46f3d59cc9d007db80247/assets/63d80f51b54631009768ceaa/default.svg"
+- type: list_item
+settings:
+title: "Voluptas id inventore dolores."
+image: "https://cdn.locomotive.works/sites/63d46f3d59cc9d007db80247/assets/63d80f51b54631009768ceaa/default.svg"
+
+2. as stand-alone section
+
+{% section 'products' %}
+
+If you want to test this section in your Wagon site, add the following
+lines in the YAML section of the page including the statement above or complete it.
+
+sections_content:
+products:
+settings:
+title: "Officia ut omnis in."
+image: "https://cdn.locomotive.works/sites/63d46f3d59cc9d007db80247/assets/63d80f51b54631009768ceaa/default.svg"
+blocks: 
+- type: list_item
+settings:
+title: "Dolores possimus enim est."
+image: "https://cdn.locomotive.works/sites/63d46f3d59cc9d007db80247/assets/63d80f51b54631009768ceaa/default.svg"
+- type: list_item
+settings:
+title: "Dolores non ut est."
+image: "https://cdn.locomotive.works/sites/63d46f3d59cc9d007db80247/assets/63d80f51b54631009768ceaa/default.svg"
+- type: list_item
+settings:
+title: "Voluptatibus ea quos harum."
+image: "https://cdn.locomotive.works/sites/63d46f3d59cc9d007db80247/assets/63d80f51b54631009768ceaa/default.svg"
+
+{% endcomment %}<section class="products">
+  <a href="product.liquid" class="product product--small">
+    <img src="/images/products/native_iron_chair_1.PNG" alt="">
+    <div class="product__description">
+      <span>Native Iron Chair</span>
+      <span>$4990</span>
+    </div>
+  </a>
+  <a href="product.liquid" class="product product--small">
+    <img src="/images/products/onix_wood_chair_1.PNG" alt="">
+    <div class="product__description">
+      <span>Onix wood Chair</span>
+      <span>$4699</span>
+    </div>
+  </a>
+  <a href="product.liquid" class="product product--small">
+    <img src="/images/products/native_light_chair_1.PNG" alt="">
+    <div class="product__description">
+      <span>Native Light Chair</span>
+      <span>$4990</span>
+    </div>
+  </a>
+  <a href="product.liquid" class="product product--small">
+    <img src="/images/products/paola_wood_chair_1.PNG" alt="">
+    <div class="product__description">
+      <span>Paola Wood Chair</span>
+      <span>$5900</span>
+    </div>
+  </a>
+</section>
+
+{{ 'base.js' | javascript_tag }}

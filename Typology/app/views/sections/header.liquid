@@ -1,0 +1,58 @@
+---
+name: Header
+icon: header
+settings:
+- label: Collections
+  id: collections
+  type: url
+- label: An image
+  id: image
+  type: image_picker
+blocks:
+- name: List item
+  type: list_item
+  settings:
+  - label: Item title
+    id: title
+    type: text
+    default: Cumque delectus esse ex.
+  - label: Item image
+    id: image
+    type: image_picker
+    default: https://cdn.locomotive.works/sites/63d46f3d59cc9d007db80247/assets/63d80f51b54631009768ceaa/default.svg
+presets:
+- name: Header
+  category: Category
+  settings:
+    title: Tempore provident repellendus esse.
+    image: https://cdn.locomotive.works/sites/63d46f3d59cc9d007db80247/assets/63d80f51b54631009768ceaa/default.svg
+  blocks:
+  - type: list_item
+    settings:
+      title: Quas et incidunt voluptatem.
+      image: https://cdn.locomotive.works/sites/63d46f3d59cc9d007db80247/assets/63d80f51b54631009768ceaa/default.svg
+  - type: list_item
+    settings:
+      title: Cupiditate quis est consequatur.
+      image: https://cdn.locomotive.works/sites/63d46f3d59cc9d007db80247/assets/63d80f51b54631009768ceaa/default.svg
+  - type: list_item
+    settings:
+      title: Nemo at odit est.
+      image: https://cdn.locomotive.works/sites/63d46f3d59cc9d007db80247/assets/63d80f51b54631009768ceaa/default.svg
+
+---
+
+<section id="{{ section.anchor_id }}" {{ section.locomotive_attributes }}>
+  <header class="header" id="header-home">
+    <a href="{{ section.settings.collections }}">Shop</a>
+    <a href="index.liquid">
+      <img
+        src="{{ 'logo_white.png' | theme_image_url }}"
+        alt="Typologylogo"
+        class="header__logo"></a>
+    <div class="bag">
+      <span class="bag__title">Bag</span>
+      <span class="bag__items">0</span>
+    </div>
+  </header>
+</section>

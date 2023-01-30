@@ -1,0 +1,72 @@
+---
+title: Collections
+slug: collections
+position: 99
+listed: true
+published: true
+is_layout: true
+---
+{{ 'collections.css' | stylesheet_tag }}
+{{ 'varbase.css' | stylesheet_tag }}
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<link
+  rel="shortcut icon"
+  href="/images/favicon/favicon.ico"
+  type="image/x-icon">
+{% section fixed_header %}
+{% block main %}
+  <div class="shop__title">
+    <h1>All</h1>
+  </div>
+  <!-- =========== SEARCH AND PRODUCT COUNTER =========  -->
+  <div class="search-counter">
+    <div class="search-counter__counter">
+      <span>13 products</span>
+    </div>
+    <div class="search-counter__search">
+      <form
+        class="form-search"
+        action="search"
+        method="get"
+        role="search">
+        <input
+          type="search"
+          name="search"
+          id="search"
+          placeholder="Search">
+        <button type="submit">
+          <img src="/images/icons/buscar.png" alt="">
+        </button>
+      </form>
+    </div>
+  </div>
+  <div class="collections">
+    <div class="collect-filter__container">
+      <div class="collect-filter__filter">
+        <div class="collect-filter__title">
+          <p>Filters</p>
+        </div>
+        <ul class="collect-filter__list">
+          <li class="collect-filter" data-value="furnitures">Furniture</li>
+          <li class="collect-filter" data-value="lamps">Lamps</li>
+          <li class="collect-filter" data-value="ceramics">Ceramics</li>
+          <li class="collect-filter" data-value="iron">Iron</li>
+          <li class="collect-filter" data-value="wood">Wood</li>
+        </ul>
+      </div>
+      <div class="collect-filter__sort-by">
+        <div class="collect-filter__title">
+          <p>Sort By</p>
+        </div>
+        <ul class="collect-filter__list">
+          <li class="collect-filter" data-value="?sort_by=price-ascending">Price: low to high</li>
+          <li class="collect-filter" data-value="?sort_by=price-descending">Price: high to low</li>
+          <li class="collect-filter" data-value="?sort_by=title-ascending">A-Z</li>
+          <li class="collect-filter" data-value="?sort_by=title-descending">Z-A</li>
+        </ul>
+      </div>
+    </div>
+    {% section products %}
+  </div>
+{% endblock %}
+{% section footer %}

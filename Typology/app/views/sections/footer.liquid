@@ -1,0 +1,144 @@
+---
+name: Footer
+icon: footer
+settings:
+- label: My awesome title
+  id: title
+  type: text
+- label: An image
+  id: image
+  type: image_picker
+blocks:
+- name: List item
+  type: list_item
+  settings:
+  - label: Item title
+    id: title
+    type: text
+    default: Omnis amet ut autem.
+  - label: Item image
+    id: image
+    type: image_picker
+    default: https://cdn.locomotive.works/sites/63d46f3d59cc9d007db80247/assets/63d80f51b54631009768ceaa/default.svg
+presets:
+- name: Footer
+  category: Category
+  settings:
+    title: Adipisci asperiores ut harum.
+    image: https://cdn.locomotive.works/sites/63d46f3d59cc9d007db80247/assets/63d80f51b54631009768ceaa/default.svg
+  blocks:
+  - type: list_item
+    settings:
+      title: Nesciunt numquam doloribus et.
+      image: https://cdn.locomotive.works/sites/63d46f3d59cc9d007db80247/assets/63d80f51b54631009768ceaa/default.svg
+  - type: list_item
+    settings:
+      title: Et eveniet amet consectetur.
+      image: https://cdn.locomotive.works/sites/63d46f3d59cc9d007db80247/assets/63d80f51b54631009768ceaa/default.svg
+  - type: list_item
+    settings:
+      title: Officiis nobis praesentium saepe.
+      image: https://cdn.locomotive.works/sites/63d46f3d59cc9d007db80247/assets/63d80f51b54631009768ceaa/default.svg
+
+---
+{% comment %}
+Above is the YAML definition of your section. Modify it to match your needs.
+
+To use your section, 2 possibilities:
+
+1. within a dropzone
+
+Make sure that your layouts or your page includes the following liquid tag:
+
+{% sections_dropzone %}
+
+If you want to test this section in your Wagon site, add the following
+lines in the YAML section of any page including the {% sections_dropzone %}
+(or inheriting from a layout including it):
+
+sections_dropzone_content:
+- type: "footer"
+settings:
+title: "Doloremque quod mollitia fuga."
+image: "https://cdn.locomotive.works/sites/63d46f3d59cc9d007db80247/assets/63d80f51b54631009768ceaa/default.svg"
+blocks: 
+- type: list_item
+settings:
+title: "Dolorem consectetur dolore enim."
+image: "https://cdn.locomotive.works/sites/63d46f3d59cc9d007db80247/assets/63d80f51b54631009768ceaa/default.svg"
+- type: list_item
+settings:
+title: "Non quis voluptatem atque."
+image: "https://cdn.locomotive.works/sites/63d46f3d59cc9d007db80247/assets/63d80f51b54631009768ceaa/default.svg"
+- type: list_item
+settings:
+title: "Dolores enim eaque impedit."
+image: "https://cdn.locomotive.works/sites/63d46f3d59cc9d007db80247/assets/63d80f51b54631009768ceaa/default.svg"
+
+2. as stand-alone section
+
+{% section 'footer' %}
+
+If you want to test this section in your Wagon site, add the following
+lines in the YAML section of the page including the statement above or complete it.
+
+sections_content:
+footer:
+settings:
+title: "Reprehenderit sed voluptas corporis."
+image: "https://cdn.locomotive.works/sites/63d46f3d59cc9d007db80247/assets/63d80f51b54631009768ceaa/default.svg"
+blocks: 
+- type: list_item
+settings:
+title: "Nobis nesciunt quod deserunt."
+image: "https://cdn.locomotive.works/sites/63d46f3d59cc9d007db80247/assets/63d80f51b54631009768ceaa/default.svg"
+- type: list_item
+settings:
+title: "Deleniti animi possimus numquam."
+image: "https://cdn.locomotive.works/sites/63d46f3d59cc9d007db80247/assets/63d80f51b54631009768ceaa/default.svg"
+- type: list_item
+settings:
+title: "Voluptatibus est aspernatur nesciunt."
+image: "https://cdn.locomotive.works/sites/63d46f3d59cc9d007db80247/assets/63d80f51b54631009768ceaa/default.svg"
+
+{% endcomment %}<footer>
+  <div class="footer__nav">
+    <div class="footer__nav-section">
+      <span>Store</span>
+      <ul>
+        <li><a href="index.liquid">Home</a></li>
+      </ul>
+    </div>
+    <div class="footer__nav-section">
+      <span>Shop</span>
+      <ul>
+        <li><a href="collections.liquid">All</a></li>
+        <li><a href="404.liquid">Featured</a></li>
+      </ul>
+    </div>
+    <div class="footer__nav-section">
+      <span>Collections</span>
+      <ul>
+        <li><a href="404.liquid">Furniture</a></li>
+        <li><a href="404.liquid">Ceramic</a></li>
+        <li><a href="404.liquid">Lamps</a></li>
+      </ul>
+    </div>
+    <div class="footer__nav-section">
+      <span>Help</span>
+      <ul>
+        <li><a href="404.liquid">Contact</a></li>
+        <li><a href="404.liquid">Login & Account</a></li>
+        <li><a href="404.liquid">Privacy Policy</a></li>
+        <li><a href="404.liquid">Refund Policy</a></li>
+      </ul>
+    </div>
+  </div>
+  <img
+    src="{{ 'logo_semi_white.png' | theme_image_url }}"
+    alt=""
+    class="footer__logo">
+  <div class="footer__copy">
+    <span>© Typology</span>
+  </div>
+</footer>

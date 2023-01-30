@@ -1,0 +1,27 @@
+---
+title: Onix
+
+# true if the page is included in the menu
+listed: true
+
+# true if the page is published
+published: true
+
+---
+{% extends parent %}
+
+{% block main %}
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <link
+    rel="shortcut icon"
+    href="/images/favicon/favicon.ico"
+    type="image/x-icon">
+  {{ 'product.css' | stylesheet_tag }}
+  {{ 'varbase.css' | stylesheet_tag }}
+  {% section fixed_header %}
+  {% block main %}
+    {% section product_info %}
+    {% include newsl %}
+  {% endblock %}
+  {% section footer %}
+{% endblock %}

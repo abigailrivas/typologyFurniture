@@ -1,0 +1,38 @@
+---
+name: Hero
+icon: image_text
+settings:
+- label: Title
+  id: title
+  type: text
+- label: Subtitle
+  id: subtitle
+  type: text
+- label: Background image
+  id: background_image
+  type: image_picker
+blocks: []
+presets:
+- name: Hero
+  category: Category
+  settings:
+    title: Unde neque aut minus.
+    background_image: https://cdn.locomotive.works/sites/63d46f3d59cc9d007db80247/assets/63d80f51b54631009768ceaa/default.svg
+  blocks: []
+
+---
+<section
+  id="{{ section.anchor_id }}"
+  class="hero"
+  {{ section.locomotive_attributes }}>
+  <h1>
+    Seamless furniture with natural fabrics</h1>
+  <a href="collections.liquid" class="btn btn--secondary">Shop All</a>
+
+  <video
+    src="{{ 'videos/bg_hero_home.mp4' | theme_image_url }}"
+    class="hero__video"
+    autoplay
+    muted
+    loop></video>
+</section>

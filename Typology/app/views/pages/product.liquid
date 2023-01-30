@@ -1,0 +1,22 @@
+---
+title: Product
+slug: product
+position: 99
+listed: true
+published: true
+is_layout: false
+---
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<link
+  rel="shortcut icon"
+  href="/images/favicon/favicon.ico"
+  type="image/x-icon">
+{{ 'product.css' | stylesheet_tag }}
+{{ 'varbase.css' | stylesheet_tag }}
+{% section fixed_header %}
+{% block main %}
+  {% section product_info %}
+  {% include newsl %}
+{% endblock %}
+{% section footer %}
+{{ 'base.js' | javascript_tag }}
